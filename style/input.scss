@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "Figtree";
+    src: url(/assets/fonts/static/Figtree-Medium.ttf);
+}
+:root {
+    --clr-yellow--: hsl(47, 88%, 63%);
+    --clr-white--: hsl(0, 0%, 100%);
+    --clr-gray-500--: hsl(0, 0%, 42%);
+    --clr-gray-950--: hsl(0, 0%, 7%);
+
+    --fs--: 1rem;
+    --fw-500--: 500;
+    --fw-800--: 800;
+    --ff-figtree--: "Figtree";
+}
+*::before, *::after, * {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-figtree--);
+}
+body {
+    font-size: var(--fs--);
+    background-color: var(--clr-yellow--);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    .content {
+        border: .1rem solid black;
+        padding: 1.3rem;
+        width: 20rem;
+        border-radius: 1rem;
+        background-color: var(--clr-white--);
+        box-shadow: .5rem .5rem var(--clr-gray-950--);
+
+        .content__illustration {
+            width: 100%;
+            border-radius: .5rem;
+        }
+        .content__meta {
+            margin: 1rem 0 1rem 0;
+            .content__category {
+                display: inline-block;
+                color: black;
+                font-weight: var(--fw-800--);
+                background-color: var(--clr-yellow--);
+                text-decoration: none;
+                padding: .2rem .5rem;
+                border-radius: .2rem;
+                margin-bottom: .5rem;
+            }
+            .content__date {
+                font-size: .9rem;
+            }
+        }
+        .content__summary {
+            margin: 1rem 0 1rem 0;
+            .content__title {
+                margin-bottom: .5rem;
+            }
+            .content__title:hover {
+                color: var(--clr-yellow--);
+                cursor: pointer;
+            }
+            .content__paragraph {
+                color: var(--clr-gray-500--);
+            }
+        }
+        .content__author {
+            margin: 1rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            .content__authors__avatar {
+                height: 2rem;
+                margin-right: .5rem;
+            }
+            .content__authors__name {
+                font-weight: var(--fw-800--);
+            }
+        }
+    }    
+}
+.attribution {
+    margin-top: 1.5rem;
+}
